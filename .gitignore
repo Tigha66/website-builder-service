@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+
+# here.now state files (keep .herenow folder but ignore state)
+.herenow/state.json
+
+# Leads with real contact info (keep template, ignore filled data)
+leads/auto-generated-leads.csv
+leads/leads-final.csv

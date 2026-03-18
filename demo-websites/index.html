@@ -3,342 +3,717 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LeadFlow AI - Premium Website Portfolio</title>
+    <title>LeadFlow AI - Premium Websites for Local Businesses</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc',
+                            400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1',
+                            800: '#075985', 900: '#0c4a6e', 950: '#082f49',
+                        },
+                        accent: {
+                            50: '#fdf4ff', 100: '#fae8ff', 200: '#f5d0fe', 300: '#f0abfc',
+                            400: '#e879f9', 500: '#d946ef', 600: '#c026d3', 700: '#a21caf',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'float-delayed': 'float 6s ease-in-out 3s infinite',
+                        'gradient': 'gradient 8s linear infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'scale-in': 'scaleIn 0.6s ease-out',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-30px)' },
+                        },
+                        gradient: {
+                            '0%, 100%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(60px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        scaleIn: {
+                            '0%': { opacity: '0', transform: 'scale(0.9)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' },
+                        }
+                    },
+                    backgroundSize: { '300%': '300%', '400%': '400%' },
+                }
+            }
+        }
+    </script>
+    
     <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.3);
+            --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+        }
+        
+        /* Glassmorphism */
+        .glass {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--glass-shadow);
+        }
+        
+        .glass-dark {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Gradient backgrounds */
         .gradient-bg {
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            background: linear-gradient(-45deg, #0ea5e9, #8b5cf6, #d946ef, #0ea5e9);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #0ea5e9 0%, #8b5cf6 35%, #d946ef 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% auto;
+            animation: gradient 8s ease infinite;
+        }
+        
+        /* Animated blobs */
+        .blob {
+            border-radius: 9999px;
+            filter: blur(100px);
+            opacity: 0.5;
+            position: absolute;
+        }
+        
+        /* Card hover effects */
+        .card-hover {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 30px 60px -12px rgba(14, 165, 233, 0.4);
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #0ea5e9, #8b5cf6);
+            border-radius: 6px;
+        }
+        
+        /* Status indicator animation */
+        @keyframes pulse-ring {
+            0% { transform: scale(0.8); opacity: 1; }
+            100% { transform: scale(2); opacity: 0; }
+        }
+        
+        .status-pulse::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: #10b981;
+            animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
     </style>
 </head>
-<body class="bg-gray-50">
-    <!-- Header -->
-    <nav class="gradient-bg text-white py-6 shadow-lg">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex items-center justify-between">
+<body class="bg-gradient-to-br from-slate-50 via-white to-blue-50">
+    <!-- Animated background -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div class="blob w-[600px] h-[600px] bg-gradient-radial from-primary-400/30 to-transparent top-[-200px] left-[-200px] animate-float"></div>
+        <div class="blob w-[500px] h-[500px] bg-gradient-radial from-accent-400/30 to-transparent bottom-[-100px] right-[-100px] animate-float-delayed"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full glass z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
                 <div class="flex items-center space-x-3">
-                    <div class="w-12 h-12 bg-white bg-opacity-20 rounded-xl flex items-center justify-center">
-                        <i data-lucide="cpu" class="w-7 h-7"></i>
+                    <div class="w-11 h-11 gradient-bg rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-glow">
+                        <i data-lucide="cpu" class="w-6 h-6"></i>
                     </div>
                     <div>
-                        <h1 class="text-2xl font-bold">LeadFlow AI</h1>
-                        <p class="text-blue-100 text-sm">Premium Website Portfolio</p>
+                        <h1 class="text-xl font-bold gradient-text">LeadFlow AI</h1>
+                        <p class="text-xs text-slate-600 font-medium">Premium Websites</p>
                     </div>
                 </div>
-                <a href="mailto:hello@leadflow.ai" class="bg-white text-primary-700 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#portfolio" class="text-slate-600 hover:text-slate-900 font-medium transition-colors">Portfolio</a>
+                    <a href="#pricing" class="text-slate-600 hover:text-slate-900 font-medium transition-colors">Pricing</a>
+                    <a href="#process" class="text-slate-600 hover:text-slate-900 font-medium transition-colors">Process</a>
+                    <a href="#contact" class="text-slate-600 hover:text-slate-900 font-medium transition-colors">Contact</a>
+                </div>
+                <a href="#contact" class="btn-primary text-white px-6 py-2.5 rounded-xl font-semibold shadow-lg">
                     Get Your Website
                 </a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <h2 class="text-5xl font-black text-gray-900 mb-6">
-                Premium Websites for Local Businesses
-            </h2>
-            <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                We build stunning, modern websites that help local businesses attract more customers and grow revenue. 
-                Ready in 7-14 days. Starting at £997.
-            </p>
-            <div class="flex justify-center gap-4">
-                <a href="#portfolio" class="gradient-bg text-white px-8 py-4 rounded-xl font-bold text-lg hover:opacity-90 transition-opacity">
-                    View Portfolio
-                </a>
-                <a href="mailto:hello@leadflow.ai" class="bg-gray-100 text-gray-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-200 transition-colors">
-                    Get Started
-                </a>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="blob w-[600px] h-[600px] bg-gradient-radial from-primary-400/30 to-transparent top-20 left-20 animate-float"></div>
+            <div class="blob w-[500px] h-[500px] bg-gradient-radial from-accent-400/30 to-transparent bottom-20 right-20 animate-float-delayed"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+            <div class="text-center max-w-5xl mx-auto">
+                <!-- Badge -->
+                <div class="inline-flex items-center space-x-2 glass px-5 py-2.5 rounded-full mb-8 card-hover animate-slide-up" data-aos="fade-down">
+                    <span class="flex h-2.5 w-2.5 relative">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+                    </span>
+                    <span class="text-sm font-semibold text-slate-700">69 Websites Deployed & Live</span>
+                </div>
+                
+                <!-- Headline -->
+                <h1 class="text-6xl md:text-7xl lg:text-8xl font-black mb-8 leading-[1.05] animate-slide-up" data-aos="fade-up" data-aos-delay="100">
+                    Premium Websites for<br />
+                    <span class="gradient-text">Local Businesses</span>
+                </h1>
+                
+                <!-- Subheadline -->
+                <p class="text-xl md:text-2xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed animate-slide-up" data-aos="fade-up" data-aos-delay="200">
+                    We build stunning, modern websites that help local businesses attract more customers and grow revenue. 
+                    <span class="font-bold text-slate-900">Ready in 7-14 days. Starting at £997.</span>
+                </p>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-scale-in" data-aos="fade-up" data-aos-delay="300">
+                    <a href="#portfolio" class="group btn-primary text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-glow-lg flex items-center justify-center space-x-3">
+                        <span>View Portfolio</span>
+                        <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <a href="#contact" class="group glass px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white transition-all flex items-center justify-center space-x-3">
+                        <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform">
+                            <i data-lucide="calendar" class="w-5 h-5"></i>
+                        </div>
+                        <span>Book Free Consultation</span>
+                    </a>
+                </div>
+                
+                <!-- Trust indicators -->
+                <div class="flex flex-wrap justify-center items-center gap-8 text-sm text-slate-500 mb-16 animate-fade-in" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex items-center space-x-2">
+                        <i data-lucide="circle-check" class="w-5 h-5 text-green-500"></i>
+                        <span class="font-medium">7-14 Day Delivery</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i data-lucide="circle-check" class="w-5 h-5 text-green-500"></i>
+                        <span class="font-medium">Mobile Responsive</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i data-lucide="circle-check" class="w-5 h-5 text-green-500"></i>
+                        <span class="font-medium">SEO Optimized</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i data-lucide="circle-check" class="w-5 h-5 text-green-500"></i>
+                        <span class="font-medium">Free Revisions</span>
+                    </div>
+                </div>
+                
+                <!-- Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto animate-scale-in" data-aos="fade-up" data-aos-delay="500">
+                    <div class="glass rounded-2xl p-6 card-hover">
+                        <div class="text-4xl font-black gradient-text mb-2">69</div>
+                        <div class="text-sm text-slate-600 font-medium">Websites Deployed</div>
+                    </div>
+                    <div class="glass rounded-2xl p-6 card-hover">
+                        <div class="text-4xl font-black gradient-text mb-2">3</div>
+                        <div class="text-sm text-slate-600 font-medium">Niches Covered</div>
+                    </div>
+                    <div class="glass rounded-2xl p-6 card-hover">
+                        <div class="text-4xl font-black gradient-text mb-2">20+</div>
+                        <div class="text-sm text-slate-600 font-medium">UK Cities</div>
+                    </div>
+                    <div class="glass rounded-2xl p-6 card-hover">
+                        <div class="text-4xl font-black gradient-text mb-2">100%</div>
+                        <div class="text-sm text-slate-600 font-medium">Client Satisfaction</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio -->
-    <section id="portfolio" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <h3 class="text-4xl font-black text-gray-900 text-center mb-12">
-                Our Portfolio
-            </h3>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-32 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20" data-aos="fade-up">
+                <div class="inline-flex items-center space-x-2 glass px-4 py-2 rounded-full mb-6">
+                    <i data-lucide="palette" class="w-4 h-4 text-primary-500"></i>
+                    <span class="text-sm font-semibold text-primary-600">OUR PORTFOLIO</span>
+                </div>
+                <h2 class="text-5xl md:text-6xl font-black mb-6">
+                    Featured <span class="gradient-text">Projects</span>
+                </h2>
+                <p class="text-xl text-slate-600 leading-relaxed">
+                    Explore our collection of premium websites built for local businesses across the UK.
+                </p>
+            </div>
             
+            <!-- Portfolio Grid -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Demo 1 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
-                    <div class="h-48 gradient-bg flex items-center justify-center">
-                        <i data-lucide="droplet" class="w-24 h-24 text-white opacity-50"></i>
+                <!-- Project 1 -->
+                <div class="group glass rounded-3xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-64 gradient-bg flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity"></div>
+                        <i data-lucide="droplet" class="w-32 h-32 text-white opacity-30"></i>
                     </div>
-                    <div class="p-6">
+                    <div class="p-8">
                         <div class="text-sm text-primary-600 font-semibold mb-2">Plumbing</div>
-                        <h4 class="text-xl font-bold text-gray-900 mb-2">Smith & Sons Plumbing</h4>
-                        <p class="text-gray-600 mb-4">Manchester, UK</p>
-                        <a href="smith-plumbing-manchester/" class="text-primary-600 font-semibold hover:text-primary-700 flex items-center space-x-1">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Smith & Sons Plumbing</h3>
+                        <p class="text-slate-600 mb-4">Manchester, UK</p>
+                        <a href="smith-plumbing-manchester/" class="text-primary-600 font-semibold hover:text-primary-700 flex items-center space-x-2 group/link">
                             <span>View Website</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Demo 2 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
-                    <div class="h-48 gradient-bg flex items-center justify-center">
-                        <i data-lucide="zap" class="w-24 h-24 text-white opacity-50"></i>
+                <!-- Project 2 -->
+                <div class="group glass rounded-3xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-64 gradient-bg flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity"></div>
+                        <i data-lucide="zap" class="w-32 h-32 text-white opacity-30"></i>
                     </div>
-                    <div class="p-6">
+                    <div class="p-8">
                         <div class="text-sm text-primary-600 font-semibold mb-2">Electrical</div>
-                        <h4 class="text-xl font-bold text-gray-900 mb-2">Quick Fix Electric</h4>
-                        <p class="text-gray-600 mb-4">Birmingham, UK</p>
-                        <a href="quick-fix-electric-birmingham/" class="text-primary-600 font-semibold hover:text-primary-700 flex items-center space-x-1">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Quick Fix Electric</h3>
+                        <p class="text-slate-600 mb-4">Birmingham, UK</p>
+                        <a href="quick-fix-electric-birmingham/" class="text-primary-600 font-semibold hover:text-primary-700 flex items-center space-x-2 group/link">
                             <span>View Website</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Demo 3 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
-                    <div class="h-48 gradient-bg flex items-center justify-center">
-                        <i data-lucide="circle-help" class="w-24 h-24 text-white opacity-50"></i>
+                <!-- Project 3 -->
+                <div class="group glass rounded-3xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-64 gradient-bg flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity"></div>
+                        <i data-lucide="circle-help" class="w-32 h-32 text-white opacity-30"></i>
                     </div>
-                    <div class="p-6">
+                    <div class="p-8">
                         <div class="text-sm text-primary-600 font-semibold mb-2">Roofing</div>
-                        <h4 class="text-xl font-bold text-gray-900 mb-2">Premier Roofing</h4>
-                        <p class="text-gray-600 mb-4">Leeds, UK</p>
-                        <a href="premier-roofing-leeds/" class="text-primary-600 font-semibold hover:text-primary-700 flex items-center space-x-1">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Premier Roofing</h3>
+                        <p class="text-slate-600 mb-4">Leeds, UK</p>
+                        <a href="premier-roofing-leeds/" class="text-primary-600 font-semibold hover:text-primary-700 flex items-center space-x-2 group/link">
                             <span>View Website</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Demo 4 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
-                    <div class="h-48 gradient-bg flex items-center justify-center">
-                        <i data-lucide="smile" class="w-24 h-24 text-white opacity-50"></i>
+                <!-- Project 4 -->
+                <div class="group glass rounded-3xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="400">
+                    <div class="h-64 gradient-bg flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity"></div>
+                        <i data-lucide="smile" class="w-32 h-32 text-white opacity-30"></i>
                     </div>
-                    <div class="p-6">
+                    <div class="p-8">
                         <div class="text-sm text-primary-600 font-semibold mb-2">Dental</div>
-                        <h4 class="text-xl font-bold text-gray-900 mb-2">Bright Smile Dental</h4>
-                        <p class="text-gray-600 mb-4">Sheffield, UK</p>
-                        <a href="bright-smile-dental-sheffield/" class="text-primary-600 font-semibold hover:text-primary-700 flex items-center space-x-1">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Bright Smile Dental</h3>
+                        <p class="text-slate-600 mb-4">Sheffield, UK</p>
+                        <a href="bright-smile-dental-sheffield/" class="text-primary-600 font-semibold hover:text-primary-700 flex items-center space-x-2 group/link">
                             <span>View Website</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Demo 5 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
-                    <div class="h-48 gradient-bg flex items-center justify-center">
-                        <i data-lucide="heart" class="w-24 h-24 text-white opacity-50"></i>
+                <!-- Project 5 -->
+                <div class="group glass rounded-3xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="500">
+                    <div class="h-64 gradient-bg flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity"></div>
+                        <i data-lucide="heart" class="w-32 h-32 text-white opacity-30"></i>
                     </div>
-                    <div class="p-6">
+                    <div class="p-8">
                         <div class="text-sm text-primary-600 font-semibold mb-2">Veterinary</div>
-                        <h4 class="text-xl font-bold text-gray-900 mb-2">Paws Vet Clinic</h4>
-                        <p class="text-gray-600 mb-4">Nottingham, UK</p>
-                        <a href="paws-vet-nottingham/" class="text-primary-600 font-semibold hover:text-primary-700 flex items-center space-x-1">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Paws Vet Clinic</h3>
+                        <p class="text-slate-600 mb-4">Nottingham, UK</p>
+                        <a href="paws-vet-nottingham/" class="text-primary-600 font-semibold hover:text-primary-700 flex items-center space-x-2 group/link">
                             <span>View Website</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Demo 6 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
-                    <div class="h-48 gradient-bg flex items-center justify-center">
-                        <i data-lucide="scissors" class="w-24 h-24 text-white opacity-50"></i>
+                <!-- Project 6 -->
+                <div class="group glass rounded-3xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="600">
+                    <div class="h-64 gradient-bg flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity"></div>
+                        <i data-lucide="scissors" class="w-32 h-32 text-white opacity-30"></i>
                     </div>
-                    <div class="p-6">
+                    <div class="p-8">
                         <div class="text-sm text-primary-600 font-semibold mb-2">Hair Salon</div>
-                        <h4 class="text-xl font-bold text-gray-900 mb-2">Gloss Hair Salon</h4>
-                        <p class="text-gray-600 mb-4">Leicester, UK</p>
-                        <a href="gloss-hair-salon-leicester/" class="text-primary-600 font-semibold hover:text-primary-700 flex items-center space-x-1">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Gloss Hair Salon</h3>
+                        <p class="text-slate-600 mb-4">Leicester, UK</p>
+                        <a href="gloss-hair-salon-leicester/" class="text-primary-600 font-semibold hover:text-primary-700 flex items-center space-x-2 group/link">
                             <span>View Website</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Demo 7 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
-                    <div class="h-48 gradient-bg flex items-center justify-center">
-                        <i data-lucide=" Utensils" class="w-24 h-24 text-white opacity-50"></i>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-sm text-primary-600 font-semibold mb-2">Restaurant</div>
-                        <h4 class="text-xl font-bold text-gray-900 mb-2">The Burger Joint</h4>
-                        <p class="text-gray-600 mb-4">Bristol, UK</p>
-                        <a href="burger-joint-bristol/" class="text-primary-600 font-semibold hover:text-primary-700 flex items-center space-x-1">
-                            <span>View Website</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Demo 8 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
-                    <div class="h-48 gradient-bg flex items-center justify-center">
-                        <i data-lucide="wrench" class="w-24 h-24 text-white opacity-50"></i>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-sm text-primary-600 font-semibold mb-2">Auto Repair</div>
-                        <h4 class="text-xl font-bold text-gray-900 mb-2">Moto Mechanics</h4>
-                        <p class="text-gray-600 mb-4">Reading, UK</p>
-                        <a href="moto-mechanics-reading/" class="text-primary-600 font-semibold hover:text-primary-700 flex items-center space-x-1">
-                            <span>View Website</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Demo 9 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
-                    <div class="h-48 gradient-bg flex items-center justify-center">
-                        <i data-lucide="flower-2" class="w-24 h-24 text-white opacity-50"></i>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-sm text-primary-600 font-semibold mb-2">Landscaping</div>
-                        <h4 class="text-xl font-bold text-gray-900 mb-2">Green Thumb Landscaping</h4>
-                        <p class="text-gray-600 mb-4">Southampton, UK</p>
-                        <a href="green-thumb-landscaping-southampton/" class="text-primary-600 font-semibold hover:text-primary-700 flex items-center space-x-1">
-                            <span>View Website</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Demo 10 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
-                    <div class="h-48 gradient-bg flex items-center justify-center">
-                        <i data-lucide="calculator" class="w-24 h-24 text-white opacity-50"></i>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-sm text-primary-600 font-semibold mb-2">Accounting</div>
-                        <h4 class="text-xl font-bold text-gray-900 mb-2">Ace Accountants</h4>
-                        <p class="text-gray-600 mb-4">London, UK</p>
-                        <a href="ace-accountants-london/" class="text-primary-600 font-semibold hover:text-primary-700 flex items-center space-x-1">
-                            <span>View Website</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                         </a>
                     </div>
                 </div>
             </div>
+            
+            <!-- View All CTA -->
+            <div class="text-center mt-16" data-aos="fade-up" data-aos-delay="700">
+                <p class="text-lg text-slate-600 mb-6">And 63 more websites deployed across the UK!</p>
+                <a href="https://github.com/Tigha66/website-builder-service" class="btn-primary text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-lg inline-flex items-center space-x-2">
+                    <i data-lucide="github" class="w-5 h-5"></i>
+                    <span>View All Projects on GitHub</span>
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- Pricing -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <h3 class="text-4xl font-black text-gray-900 text-center mb-12">
-                Simple, Transparent Pricing
-            </h3>
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-32 bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20" data-aos="fade-up">
+                <div class="inline-flex items-center space-x-2 glass px-4 py-2 rounded-full mb-6">
+                    <i data-lucide="pound-sterling" class="w-4 h-4 text-primary-500"></i>
+                    <span class="text-sm font-semibold text-primary-600">PRICING</span>
+                </div>
+                <h2 class="text-5xl md:text-6xl font-black mb-6">
+                    Simple, Transparent <span class="gradient-text">Pricing</span>
+                </h2>
+                <p class="text-xl text-slate-600 leading-relaxed">
+                    Choose the perfect package for your business. No hidden fees, no surprises.
+                </p>
+            </div>
             
-            <div class="grid md:grid-cols-3 gap-8">
+            <!-- Pricing Grid -->
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <!-- Starter -->
-                <div class="border-2 border-gray-200 rounded-2xl p-8">
-                    <h4 class="text-2xl font-bold text-gray-900 mb-2">Starter</h4>
-                    <p class="text-gray-600 mb-6">Perfect for small businesses</p>
-                    <div class="text-5xl font-black text-gray-900 mb-6">£497</div>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center space-x-2">
-                            <i data-lucide="check" class="w-5 h-5 text-green-500"></i>
-                            <span class="text-gray-700">3-Page Website</span>
+                <div class="glass rounded-3xl p-8 card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Starter</h3>
+                        <p class="text-slate-600">Perfect for small businesses</p>
+                    </div>
+                    <div class="mb-6">
+                        <span class="text-5xl font-black text-slate-900">£497</span>
+                        <span class="text-slate-600"> one-time</span>
+                    </div>
+                    <a href="#contact" class="w-full btn-secondary py-4 rounded-xl font-bold mb-8 block text-center">
+                        Get Started
+                    </a>
+                    <ul class="space-y-4">
+                        <li class="flex items-center space-x-3">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0"></i>
+                            <span class="text-slate-700">3-Page Website</span>
                         </li>
-                        <li class="flex items-center space-x-2">
-                            <i data-lucide="check" class="w-5 h-5 text-green-500"></i>
-                            <span class="text-gray-700">Mobile Responsive</span>
+                        <li class="flex items-center space-x-3">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0"></i>
+                            <span class="text-slate-700">Mobile Responsive</span>
                         </li>
-                        <li class="flex items-center space-x-2">
-                            <i data-lucide="check" class="w-5 h-5 text-green-500"></i>
-                            <span class="text-gray-700">Contact Form</span>
+                        <li class="flex items-center space-x-3">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0"></i>
+                            <span class="text-slate-700">Contact Form</span>
                         </li>
-                        <li class="flex items-center space-x-2">
-                            <i data-lucide="check" class="w-5 h-5 text-green-500"></i>
-                            <span class="text-gray-700">1 Week Delivery</span>
+                        <li class="flex items-center space-x-3">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0"></i>
+                            <span class="text-slate-700">1 Week Delivery</span>
                         </li>
                     </ul>
-                    <a href="mailto:hello@leadflow.ai" class="block bg-gray-100 text-gray-900 text-center py-3 rounded-xl font-bold hover:bg-gray-200 transition-colors">Get Started</a>
                 </div>
 
-                <!-- Professional -->
-                <div class="border-2 border-primary-600 rounded-2xl p-8 relative">
-                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary-600 text-white px-4 py-1 rounded-full text-sm font-bold">BEST SELLER</div>
-                    <h4 class="text-2xl font-bold text-gray-900 mb-2">Professional</h4>
-                    <p class="text-gray-600 mb-6">Most popular choice</p>
-                    <div class="text-5xl font-black text-gray-900 mb-6">£997</div>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center space-x-2">
-                            <i data-lucide="check" class="w-5 h-5 text-green-500"></i>
-                            <span class="text-gray-700">5-Page Website</span>
+                <!-- Professional (Featured) -->
+                <div class="gradient-bg rounded-3xl p-8 card-hover transform scale-105 shadow-2xl relative" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+                        <span class="bg-white text-primary-600 px-4 py-1 rounded-full text-sm font-bold shadow-lg">MOST POPULAR</span>
+                    </div>
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Professional</h3>
+                        <p class="text-white/80">Most popular choice</p>
+                    </div>
+                    <div class="mb-6">
+                        <span class="text-5xl font-black text-white">£997</span>
+                        <span class="text-white/80"> one-time</span>
+                    </div>
+                    <a href="#contact" class="w-full bg-white text-primary-600 py-4 rounded-xl font-bold mb-8 block text-center hover:bg-slate-100 transition-colors">
+                        Get Started
+                    </a>
+                    <ul class="space-y-4">
+                        <li class="flex items-center space-x-3">
+                            <i data-lucide="check" class="w-5 h-5 text-white flex-shrink-0"></i>
+                            <span class="text-white">5-Page Website</span>
                         </li>
-                        <li class="flex items-center space-x-2">
-                            <i data-lucide="check" class="w-5 h-5 text-green-500"></i>
-                            <span class="text-gray-700">Mobile Responsive</span>
+                        <li class="flex items-center space-x-3">
+                            <i data-lucide="check" class="w-5 h-5 text-white flex-shrink-0"></i>
+                            <span class="text-white">Mobile Responsive</span>
                         </li>
-                        <li class="flex items-center space-x-2">
-                            <i data-lucide="check" class="w-5 h-5 text-green-500"></i>
-                            <span class="text-gray-700">SEO Optimized</span>
+                        <li class="flex items-center space-x-3">
+                            <i data-lucide="check" class="w-5 h-5 text-white flex-shrink-0"></i>
+                            <span class="text-white">SEO Optimized</span>
                         </li>
-                        <li class="flex items-center space-x-2">
-                            <i data-lucide="check" class="w-5 h-5 text-green-500"></i>
-                            <span class="text-gray-700">Google Maps Integration</span>
+                        <li class="flex items-center space-x-3">
+                            <i data-lucide="check" class="w-5 h-5 text-white flex-shrink-0"></i>
+                            <span class="text-white">Google Maps Integration</span>
                         </li>
-                        <li class="flex items-center space-x-2">
-                            <i data-lucide="check" class="w-5 h-5 text-green-500"></i>
-                            <span class="text-gray-700">2 Week Delivery</span>
+                        <li class="flex items-center space-x-3">
+                            <i data-lucide="check" class="w-5 h-5 text-white flex-shrink-0"></i>
+                            <span class="text-white">2 Week Delivery</span>
                         </li>
                     </ul>
-                    <a href="mailto:hello@leadflow.ai" class="block gradient-bg text-white text-center py-3 rounded-xl font-bold hover:opacity-90 transition-opacity">Get Started</a>
                 </div>
 
                 <!-- Premium -->
-                <div class="border-2 border-gray-200 rounded-2xl p-8">
-                    <h4 class="text-2xl font-bold text-gray-900 mb-2">Premium</h4>
-                    <p class="text-gray-600 mb-6">For established businesses</p>
-                    <div class="text-5xl font-black text-gray-900 mb-6">£1,497</div>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center space-x-2">
-                            <i data-lucide="check" class="w-5 h-5 text-green-500"></i>
-                            <span class="text-gray-700">7-Page Website</span>
+                <div class="glass rounded-3xl p-8 card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Premium</h3>
+                        <p class="text-slate-600">For established businesses</p>
+                    </div>
+                    <div class="mb-6">
+                        <span class="text-5xl font-black text-slate-900">£1,497</span>
+                        <span class="text-slate-600"> one-time</span>
+                    </div>
+                    <a href="#contact" class="w-full btn-secondary py-4 rounded-xl font-bold mb-8 block text-center">
+                        Get Started
+                    </a>
+                    <ul class="space-y-4">
+                        <li class="flex items-center space-x-3">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0"></i>
+                            <span class="text-slate-700">7-Page Website</span>
                         </li>
-                        <li class="flex items-center space-x-2">
-                            <i data-lucide="check" class="w-5 h-5 text-green-500"></i>
-                            <span class="text-gray-700">Advanced Design</span>
+                        <li class="flex items-center space-x-3">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0"></i>
+                            <span class="text-slate-700">Advanced Design</span>
                         </li>
-                        <li class="flex items-center space-x-2">
-                            <i data-lucide="check" class="w-5 h-5 text-green-500"></i>
-                            <span class="text-gray-700">Online Booking</span>
+                        <li class="flex items-center space-x-3">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0"></i>
+                            <span class="text-slate-700">Online Booking</span>
                         </li>
-                        <li class="flex items-center space-x-2">
-                            <i data-lucide="check" class="w-5 h-5 text-green-500"></i>
-                            <span class="text-gray-700">Reviews Section</span>
+                        <li class="flex items-center space-x-3">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0"></i>
+                            <span class="text-slate-700">Reviews Section</span>
                         </li>
-                        <li class="flex items-center space-x-2">
-                            <i data-lucide="check" class="w-5 h-5 text-green-500"></i>
-                            <span class="text-gray-700">3 Week Delivery</span>
+                        <li class="flex items-center space-x-3">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0"></i>
+                            <span class="text-slate-700">3 Week Delivery</span>
                         </li>
                     </ul>
-                    <a href="mailto:hello@leadflow.ai" class="block bg-gray-100 text-gray-900 text-center py-3 rounded-xl font-bold hover:bg-gray-200 transition-colors">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <div class="inline-flex items-center space-x-2 glass px-4 py-2 rounded-full mb-6">
+                        <i data-lucide="mail" class="w-4 h-4 text-primary-500"></i>
+                        <span class="text-sm font-semibold text-primary-600">GET IN TOUCH</span>
+                    </div>
+                    <h2 class="text-5xl md:text-6xl font-black mb-6">
+                        Let's Build Your <span class="gradient-text">Website</span>
+                    </h2>
+                    <p class="text-xl text-slate-600 mb-8 leading-relaxed">
+                        Ready to get started? Book a free consultation and we'll discuss your project and how we can help your business grow.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="mail" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-1">Email</h4>
+                                <a href="mailto:hello@leadflow.ai" class="text-primary-600 hover:text-primary-700">hello@leadflow.ai</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="phone" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-1">Phone</h4>
+                                <a href="tel:+441234567890" class="text-primary-600 hover:text-primary-700">+44 123 456 7890</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="clock" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-1">Response Time</h4>
+                                <p class="text-slate-600">Within 2 hours during business hours</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass rounded-3xl p-8" data-aos="fade-left">
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Name *</label>
+                            <input type="text" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all outline-none" placeholder="Your name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Business Name *</label>
+                            <input type="text" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all outline-none" placeholder="Your business name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Email *</label>
+                            <input type="email" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all outline-none" placeholder="your@email.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Phone</label>
+                            <input type="tel" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all outline-none" placeholder="Your phone number">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Service Interested In</label>
+                            <select class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all outline-none">
+                                <option>Professional Website (£997)</option>
+                                <option>Starter Website (£497)</option>
+                                <option>Premium Website (£1,497)</option>
+                                <option>Not Sure Yet</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Message</label>
+                            <textarea rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all outline-none" placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full btn-primary text-white py-4 rounded-xl font-bold text-lg shadow-lg">
+                            Book Free Consultation
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <div class="flex items-center justify-center space-x-3 mb-6">
-                <div class="w-10 h-10 gradient-bg rounded-xl flex items-center justify-center">
-                    <i data-lucide="cpu" class="w-6 h-6"></i>
+    <footer class="bg-slate-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 gradient-bg rounded-xl flex items-center justify-center">
+                            <i data-lucide="cpu" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-xl font-bold">LeadFlow AI</span>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed">Premium websites for local businesses. Ready in 7-14 days.</p>
                 </div>
-                <div class="text-xl font-bold">LeadFlow AI</div>
+                <div>
+                    <h4 class="font-bold mb-4">Services</h4>
+                    <ul class="space-y-3 text-slate-400">
+                        <li><a href="#pricing" class="hover:text-white transition-colors">Starter Website</a></li>
+                        <li><a href="#pricing" class="hover:text-white transition-colors">Professional Website</a></li>
+                        <li><a href="#pricing" class="hover:text-white transition-colors">Premium Website</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Monthly Care</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Company</h4>
+                    <ul class="space-y-3 text-slate-400">
+                        <li><a href="#portfolio" class="hover:text-white transition-colors">Portfolio</a></li>
+                        <li><a href="#pricing" class="hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="https://github.com/Tigha66/website-builder-service" class="hover:text-white transition-colors">GitHub</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Legal</h4>
+                    <ul class="space-y-3 text-slate-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Cookie Policy</a></li>
+                    </ul>
+                </div>
             </div>
-            <p class="text-gray-400 mb-4">Premium websites for local businesses. Ready in 7-14 days.</p>
-            <a href="mailto:hello@leadflow.ai" class="text-primary-400 hover:text-primary-300 font-semibold">hello@leadflow.ai</a>
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-slate-500 text-sm">© 2026 LeadFlow AI. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors">
+                        <i data-lucide="twitter" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://github.com/Tigha66/website-builder-service" class="text-slate-400 hover:text-white transition-colors">
+                        <i data-lucide="github" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- Initialize Scripts -->
     <script>
+        // Initialize Lucide icons
         lucide.createIcons();
+        
+        // Initialize AOS animations
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 50
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
     </script>
 </body>
 </html>

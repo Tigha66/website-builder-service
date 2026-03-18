@@ -1,0 +1,16 @@
+{
+  "publishes": {
+    "quiet-pepper-zzmx": {
+      "siteUrl": "https://quiet-pepper-zzmx.here.now/",
+      "claimToken": "6adf08ae54953dfe981279302081728f36fde6502a5584f2f8691272788a2fe8",
+      "claimUrl": "https://here.now/claim?slug=quiet-pepper-zzmx&token=6adf08ae54953dfe981279302081728f36fde6502a5584f2f8691272788a2fe8",
+      "expiresAt": "2026-03-19T22:18:42.426Z"
+    },
+    "gilded-mesa-8gg9": {
+      "siteUrl": "https://gilded-mesa-8gg9.here.now/",
+      "claimToken": "0aaa4d77ee3271d5dc02ef4aa8beead7d105e84fb3b03a85c4de67243fc7ff96",
+      "claimUrl": "https://here.now/claim?slug=gilded-mesa-8gg9&token=0aaa4d77ee3271d5dc02ef4aa8beead7d105e84fb3b03a85c4de67243fc7ff96",
+      "expiresAt": "2026-03-19T22:30:28.344Z"
+    }
+  }
+}
