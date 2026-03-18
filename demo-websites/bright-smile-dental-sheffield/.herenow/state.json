@@ -1,0 +1,10 @@
+{
+  "publishes": {
+    "pastel-fossil-gnvc": {
+      "siteUrl": "https://pastel-fossil-gnvc.here.now/",
+      "claimToken": "42d31b897567634bb33348752aba93c414b9c4f8de88bd3016d4785e1724c5eb",
+      "claimUrl": "https://here.now/claim?slug=pastel-fossil-gnvc&token=42d31b897567634bb33348752aba93c414b9c4f8de88bd3016d4785e1724c5eb",
+      "expiresAt": "2026-03-19T21:47:17.500Z"
+    }
+  }
+}

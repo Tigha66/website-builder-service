@@ -1,0 +1,10 @@
+{
+  "publishes": {
+    "noble-linden-q7t8": {
+      "siteUrl": "https://noble-linden-q7t8.here.now/",
+      "claimToken": "7efe1990f70cadca2405e77876144c03169dc4c86b7c426c6a77faf3611ec96a",
+      "claimUrl": "https://here.now/claim?slug=noble-linden-q7t8&token=7efe1990f70cadca2405e77876144c03169dc4c86b7c426c6a77faf3611ec96a",
+      "expiresAt": "2026-03-19T21:47:48.061Z"
+    }
+  }
+}

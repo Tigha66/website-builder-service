@@ -1,0 +1,10 @@
+{
+  "publishes": {
+    "serene-pocket-xwcw": {
+      "siteUrl": "https://serene-pocket-xwcw.here.now/",
+      "claimToken": "3f3b355a451bcb040580034cd48b653c24a093648cd4d6500eb4ef55433ad6dc",
+      "claimUrl": "https://here.now/claim?slug=serene-pocket-xwcw&token=3f3b355a451bcb040580034cd48b653c24a093648cd4d6500eb4ef55433ad6dc",
+      "expiresAt": "2026-03-19T21:47:56.794Z"
+    }
+  }
+}

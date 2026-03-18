@@ -1,0 +1,10 @@
+{
+  "publishes": {
+    "cobalt-fjord-yt8s": {
+      "siteUrl": "https://cobalt-fjord-yt8s.here.now/",
+      "claimToken": "2a02e4a447554ab5e6e7a11dc94f83e3fa435fd23396b2e4ec09894c3d5ffdb3",
+      "claimUrl": "https://here.now/claim?slug=cobalt-fjord-yt8s&token=2a02e4a447554ab5e6e7a11dc94f83e3fa435fd23396b2e4ec09894c3d5ffdb3",
+      "expiresAt": "2026-03-19T21:47:19.364Z"
+    }
+  }
+}

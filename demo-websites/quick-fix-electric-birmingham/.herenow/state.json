@@ -1,0 +1,10 @@
+{
+  "publishes": {
+    "emerald-knoll-fag9": {
+      "siteUrl": "https://emerald-knoll-fag9.here.now/",
+      "claimToken": "0846c7c28d8e1cfd7760664445facb6e7509d138f0cb920171fa055388d34325",
+      "claimUrl": "https://here.now/claim?slug=emerald-knoll-fag9&token=0846c7c28d8e1cfd7760664445facb6e7509d138f0cb920171fa055388d34325",
+      "expiresAt": "2026-03-19T21:47:41.082Z"
+    }
+  }
+}

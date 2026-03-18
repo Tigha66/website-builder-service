@@ -1,0 +1,19 @@
+Business Name,Niche,Owner Name,Phone,Email,Address,City,Country,Postcode,Current Website,Website Status,Facebook,Instagram,Google Business,Opportunity Score (1-10),Notes,Contact Date,Response,Status
+[Example] Smith Plumbing,Plumber,John Smith,07700 900123,info@smithplumbing.co.uk,123 High Street,Manchester,UK,M1 1AB,None,None,https://facebook.com/smithplumbing,https://instagram.com/smithplumbing,https://g.page/smithplumbing,9,"Good reviews (4.8 stars), active on social but no website",2026-03-18,No response yet,Lead
+[Example] Quick Fix Electric,Electrician,Sarah Johnson,07700 900456,sarah@quickfixelectric.co.uk,456 Market Street,Birmingham,UK,B1 1AA,Outdated,Outdated (looks like 2010),None,None,https://g.page/quickfixelectric,8,"Old website not mobile-friendly, no SSL",2026-03-18,Interested,Contacted
+,,,,,,,,,,,,,,,,,,,
+INSTRUCTIONS: Fill this spreadsheet with real leads you find from:
+UK Sources: Yell.com, Checkatrade.com, ThomsonLocal.com, Google Maps, Facebook Business
+US Sources: YellowPages.com, Yelp.com, Angi.com, Thumbtack.com, Google Maps
+
+Research Process:
+1. Search "[niche] [city]" on Google Maps
+2. Check if they have a website link
+3. If no website or poor website, click through to their Facebook/Google listing
+4. Collect all publicly available contact info
+5. Rate opportunity 1-10 (10 = no website + good reviews + active business)
+6. Add to this spreadsheet
+7. Start outreach using email/phone scripts in BUSINESS-SYSTEM.md
+
+Target: 100 leads minimum
+Goal: Close 10-20 clients from 100 leads (10-20% conversion rate)

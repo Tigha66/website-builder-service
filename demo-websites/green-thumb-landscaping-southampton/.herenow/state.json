@@ -1,0 +1,10 @@
+{
+  "publishes": {
+    "minty-mantra-gg23": {
+      "siteUrl": "https://minty-mantra-gg23.here.now/",
+      "claimToken": "9c78a22b0feeb6cc5919b0bfff65b25d2661a7eecc07952ea0081961d584f93b",
+      "claimUrl": "https://here.now/claim?slug=minty-mantra-gg23&token=9c78a22b0feeb6cc5919b0bfff65b25d2661a7eecc07952ea0081961d584f93b",
+      "expiresAt": "2026-03-19T21:47:26.668Z"
+    }
+  }
+}

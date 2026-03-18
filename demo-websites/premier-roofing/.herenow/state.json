@@ -1,0 +1,10 @@
+{
+  "publishes": {
+    "ubuntu-gazebo-fhdp": {
+      "siteUrl": "https://ubuntu-gazebo-fhdp.here.now/",
+      "claimToken": "b7f8e019c75fcbc9adce0c87b341a620cd5e8cdb39cc233dcf91d9d2ab1a4182",
+      "claimUrl": "https://here.now/claim?slug=ubuntu-gazebo-fhdp&token=b7f8e019c75fcbc9adce0c87b341a620cd5e8cdb39cc233dcf91d9d2ab1a4182",
+      "expiresAt": "2026-03-19T21:47:38.584Z"
+    }
+  }
+}

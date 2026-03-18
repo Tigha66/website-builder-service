@@ -1,0 +1,10 @@
+{
+  "publishes": {
+    "cosmic-sonnet-dbsm": {
+      "siteUrl": "https://cosmic-sonnet-dbsm.here.now/",
+      "claimToken": "938c63d3912498c5369afb4656f8c7206be60e36fdb8f4939611547f98b3ac91",
+      "claimUrl": "https://here.now/claim?slug=cosmic-sonnet-dbsm&token=938c63d3912498c5369afb4656f8c7206be60e36fdb8f4939611547f98b3ac91",
+      "expiresAt": "2026-03-19T21:47:43.521Z"
+    }
+  }
+}

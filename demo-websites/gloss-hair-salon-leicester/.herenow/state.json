@@ -1,0 +1,10 @@
+{
+  "publishes": {
+    "coral-monsoon-3w8q": {
+      "siteUrl": "https://coral-monsoon-3w8q.here.now/",
+      "claimToken": "ae0544f75374ebb8a8dc4fac8200ff7a898f61a4d1f0cbfc9213e30a50a8c0f1",
+      "claimUrl": "https://here.now/claim?slug=coral-monsoon-3w8q&token=ae0544f75374ebb8a8dc4fac8200ff7a898f61a4d1f0cbfc9213e30a50a8c0f1",
+      "expiresAt": "2026-03-19T21:47:24.092Z"
+    }
+  }
+}

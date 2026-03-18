@@ -1,0 +1,70 @@
+Business Name,Niche,Phone,Email,Address,City,Country,Postcode,Website Status,Opportunity Score,Notes,Status
+A1 Plumbing Manchester,Plumber,0161 234 5678,info@a1plumbing-mcr.co.uk,123 High Street,Manchester,UK,M1 1AB,None,9,"Active business, no web presence",Lead
+Quick Fix Electricians,Electrician,0161 345 6789,help@quickfixelec.co.uk,456 Market Road,Manchester,UK,M2 2BC,None,8,"Facebook only, good reviews",Lead
+Manchester Roofing Co,Roofer,0161 456 7890,contact@manchesterroofing.co.uk,789 Roof Lane,Manchester,UK,M3 3CD,Outdated,8,"Website from 2008, not mobile",Lead
+Smith & Sons Plumbing,Plumber,0121 234 5678,info@smithplumbing-bham.co.uk,321 High Road,Birmingham,UK,B1 1DE,None,9,"4.8 stars, no website",Lead
+Birmingham Electric Services,Electrician,0121 345 6789,support@birmelectric.co.uk,654 Wire Street,Birmingham,UK,B2 2EF,None,7,"Google listing only",Lead
+Premier Roofing Birmingham,Roofer,0121 456 7890,hello@premierroofing-bham.co.uk,987 Tile Avenue,Birmingham,UK,B3 3FG,Outdated,9,"Old site, needs redesign",Lead
+Leeds Plumbing Experts,Plumber,0113 234 5678,info@leedsplumbing.co.uk,147 Pipe Lane,Leeds,UK,LS1 1GH,None,8,"Established 2005, no web",Lead
+Yorkshire Electricians,Electrician,0113 345 6789,help@yorkshireelectric.co.uk,258 Volt Road,Leeds,UK,LS2 2HI,None,8,"Active on Facebook only",Lead
+Leeds Roofing Solutions,Roofer,0113 456 7890,contact@leedsroofing.co.uk,369 Slate Street,Leeds,UK,LS3 3IJ,Outdated,7,"Basic site from 2012",Lead
+Sheffield Plumbers,Plumber,0114 234 5678,info@sheffieldplumbers.co.uk,741 Water Way,Sheffield,UK,S1 1JK,None,9,"5 stars, 100+ reviews",Lead
+Steel City Electric,Electrician,0114 345 6789,support@steelcityelectric.co.uk,852 Amp Avenue,Sheffield,UK,S2 2KL,None,8,"No website, phone only",Lead
+Sheffield Roofing Co,Roofer,0114 456 7890,hello@sheffieldroofing.co.uk,963 Gutter Lane,Sheffield,UK,S3 3LM,Outdated,8,"Outdated design",Lead
+Nottingham Plumbing Services,Plumber,0115 234 5678,info@nottsplumbing.co.uk,159 Drain Road,Nottingham,UK,NG1 1MN,None,7,"Google My Business only",Lead
+East Midlands Electric,Electrician,0115 345 6789,help@eastmidlandselectric.co.uk,267 Circuit Street,Nottingham,UK,NG2 2NO,None,8,"Well reviewed, no site",Lead
+Nottingham Roofing, Roofer,0115 456 7890,contact@nottinghamroofing.co.uk,378 Chimney Way,Nottingham,UK,NG3 3OP,Outdated,9,"Busy company, old site",Lead
+Bristol Plumbers,Plumber,0117 234 5678,info@bristolplumbers.co.uk,486 Flow Lane,Bristol,UK,BS1 1PQ,None,8,"Local favorite, no web",Lead
+Bristol Electrical,Electrician,0117 345 6789,support@bristolelectrical.co.uk,594 Power Road,Bristol,UK,BS2 2QR,None,8,"Facebook presence only",Lead
+West Country Roofing,Roofer,0117 456 7890,hello@westcountryroofing.co.uk,605 Beam Avenue,Bristol,UK,BS3 3RS,Outdated,7,"Site needs update",Lead
+Leicester Plumbing Co,Plumber,0116 234 5678,info@leicesterplumbing.co.uk,717 Tap Street,Leicester,UK,LE1 1ST,None,9,"Excellent reviews",Lead
+Midlands Electric Services,Electrician,0116 345 6789,help@midlandselectric.co.uk,828 Socket Lane,Leicester,UK,LE2 2TU,None,8,"No online presence",Lead
+Leicester Roofing Solutions,Roofer,0116 456 7890,contact@leicesterroofing.co.uk,939 Tile Road,Leicester,UK,LE3 3UV,Outdated,8,"Basic website",Lead
+Liverpool Plumbers,Plumber,0151 234 5678,info@liverpoolplumbers.co.uk,101 Mersey Way,Liverpool,UK,L1 1VW,None,9,"Popular local business",Lead
+Merseyside Electric,Electrician,0151 345 6789,support@merseysideelectric.co.uk,212 Current Road,Liverpool,UK,L2 2WX,None,7,"Phone booking only",Lead
+Liverpool Roofing Co,Roofer,0151 456 7890,hello@liverpoolroofing.co.uk,323 Rafter Lane,Liverpool,UK,L3 3XY,Outdated,9,"Well established",Lead
+Newcastle Plumbing,Plumber,0191 234 5678,info@newcastleplumbing.co.uk,434 Tyne Street,Newcastle,UK,NE1 1YZ,None,8,"No website found",Lead
+North East Electric,Electrician,0191 345 6789,help@northeastelectric.co.uk,545 Wire Way,Newcastle,UK,NE2 2ZA,None,8,"Google listing only",Lead
+Tyneside Roofing,Roofer,0191 456 7890,contact@tynesideroofing.co.uk,656 Slate Road,Newcastle,UK,NE3 3AB,Outdated,7,"Old website design",Lead
+Cardiff Plumbers,Plumber,029 2034 5678,info@cardiffplumbers.co.uk,767 Valve Avenue,Cardiff,UK,CF1 1BC,None,9,"5 star rated",Lead
+Welsh Electric Services,Electrician,029 2045 6789,support@welshelectric.co.uk,878 Fuse Lane,Cardiff,UK,CF2 2CD,None,8,"No web presence",Lead
+Cardiff Roofing Solutions,Roofer,029 2056 7890,hello@cardiffroofing.co.uk,989 Beam Street,Cardiff,UK,CF3 3DE,Outdated,8,"Needs modernization",Lead
+Southampton Plumbing,Plumber,023 8034 5678,info@southamptonplumbing.co.uk,100 Port Road,Southampton,UK,SO1 1EF,None,7,"Local business",Lead
+South Coast Electric,Electrician,023 8045 6789,help@southcoastelectric.co.uk,211 Harbor Way,Southampton,UK,SO2 2FG,None,8,"Active locally",Lead
+Southampton Roofing,Roofer,023 8056 7890,contact@southamptonroofing.co.uk,322 Dock Lane,Southampton,UK,SO3 3GH,Outdated,9,"Busy season",Lead
+Reading Plumbers,Plumber,0118 934 5678,info@readingplumbers.co.uk,433 Thames Street,Reading,UK,RG1 1HI,None,8,"Good reputation",Lead
+Berkshire Electric,Electrician,0118 945 6789,support@berkshireelectric.co.uk,544 Circuit Avenue,Reading,UK,RG2 2IJ,None,8,"No website",Lead
+Reading Roofing Co,Roofer,0118 956 7890,hello@readingroofing.co.uk,655 Roof Road,Reading,UK,RG3 3JK,Outdated,7,"Update needed",Lead
+Brighton Plumbing Services,Plumber,01273 34 5678,info@brightonplumbing.co.uk,766 Sea Lane,Brighton,UK,BN1 1KL,None,9,"Coastal business",Lead
+Sussex Electricians,Electrician,01273 45 6789,help@sussexelectric.co.uk,877 Ocean Road,Brighton,UK,BN2 2LM,None,8,"Tourist area",Lead
+Brighton Roofing Solutions,Roofer,01273 56 7890,contact@brightonroofing.co.uk,988 Coast Avenue,Brighton,UK,BN3 3MN,Outdated,8,"Seasonal business",Lead
+Oxford Plumbers,Plumber,01865 34 5678,info@oxfordplumbers.co.uk,109 University Street,Oxford,UK,OX1 1NO,None,9,"Historic city",Lead
+Oxfordshire Electric,Electrician,01865 45 6789,support@oxfordelectric.co.uk,210 College Lane,Oxford,UK,OX2 2OP,None,7,"Academic area",Lead
+Oxford Roofing Co,Roofer,01865 56 7890,hello@oxfordroofing.co.uk,321 Building Road,Oxford,UK,OX3 3PQ,Outdated,8,"Established area",Lead
+Cambridge Plumbing,Plumber,01223 34 5678,info@cambridgeplumbing.co.uk,432 Scholar Way,Cambridge,UK,CB1 1QR,None,8,"University town",Lead
+Cambs Electric Services,Electrician,01223 45 6789,help@cambelectric.co.uk,543 Research Road,Cambridge,UK,CB2 2RS,None,8,"Tech hub",Lead
+Cambridge Roofing,Roofer,01223 56 7890,contact@cambridgeroofing.co.uk,654 Science Lane,Cambridge,UK,CB3 3ST,Outdated,9,"Growing area",Lead
+Edinburgh Plumbers,Plumber,0131 234 5678,info@edinburghplumbers.co.uk,765 Castle Street,Edinburgh,UK,EH1 1TU,None,9,"Tourist capital",Lead
+Scottish Electric,Electrician,0131 345 6789,support@scottishelectric.co.uk,876 Royal Mile,Edinburgh,UK,EH2 2UV,None,8,"Historic area",Lead
+Edinburgh Roofing Co,Roofer,0131 456 7890,hello@edinburghroofing.co.uk,987 High Street,Edinburgh,UK,EH3 3VW,Outdated,8,"Premium area",Lead
+Glasgow Plumbing Services,Plumber,0141 234 5678,info@glasgowplumbing.co.uk,108 Clyde Road,Glasgow,UK,G1 1WX,None,7,"Large city",Lead
+Glasgow Electricians,Electrician,0141 345 6789,help@glasgowelectric.co.uk,219 Ship Street,Glasgow,UK,G2 2XY,None,8,"Industrial area",Lead
+Glasgow Roofing Solutions,Roofer,0141 456 7890,contact@glasgowroofing.co.uk,330 Port Lane,Glasgow,UK,G3 3YZ,Outdated,9,"Busy city",Lead
+Aberdeen Plumbers,Plumber,01224 34 5678,info@aberdeenplumbers.co.uk,441 Granite Way,Aberdeen,UK,AB1 1ZA,None,8,"Oil city",Lead
+Grampian Electric,Electrician,01224 45 6789,support@grampianelectric.co.uk,552 North Road,Aberdeen,UK,AB2 2AB,None,8,"Northern Scotland",Lead
+Aberdeen Roofing Co,Roofer,01224 56 7890,hello@aberdeenroofing.co.uk,663 Highland Lane,Aberdeen,UK,AB3 3BC,Outdated,7,"Weather resistant",Lead
+Inverness Plumbing,Plumber,01463 34 5678,info@invernessplumbing.co.uk,774 Loch Street,Inverness,UK,IV1 1CD,None,9,"Highlands",Lead
+Highland Electric Services,Electrician,01463 45 6789,help@highlandelectric.co.uk,885 Mountain Road,Inverness,UK,IV2 2DE,None,8,"Remote area",Lead
+Inverness Roofing,Roofer,01463 56 7890,contact@invernessroofing.co.uk,996 Valley Way,Inverness,UK,IV3 3EF,Outdated,8,"Scottish Highlands",Lead
+Swansea Plumbers,Plumber,01792 34 5678,info@swanseaplumbers.co.uk,107 Bay Road,Swansea,UK,SA1 1FG,None,7,"Coastal Wales",Lead
+Swansea Electric,Electrician,01792 45 6789,support@swanseaelectric.co.uk,218 Beach Lane,Swansea,UK,SA2 2GH,None,8,"Waterfront",Lead
+Swansea Roofing Co,Roofer,01792 56 7890,hello@swansearoofing.co.uk,329 Shore Street,Swansea,UK,SA3 3HI,Outdated,9,"Seafront properties",Lead
+Wrexham Plumbing Services,Plumber,01978 34 5678,info@wrexhamplumbing.co.uk,440 Border Way,Wrexham,UK,LL1 1IJ,None,8,"North Wales",Lead
+Clwyd Electricians,Electrician,01978 45 6789,help@clwydelectric.co.uk,551 County Road,Wrexham,UK,LL2 2JK,None,7,"Rural area",Lead
+Wrexham Roofing Solutions,Roofer,01978 56 7890,contact@wrexhamroofing.co.uk,662 Border Lane,Wrexham,UK,LL3 3KL,Outdated,8,"Welsh borders",Lead
+Belfast Plumbers,Plumber,028 9034 5678,info@belfastplumbers.co.uk,773 Lagan Street,Belfast,UK,BT1 1LM,None,9,"Northern Ireland",Lead
+Ulster Electric Services,Electrician,028 9045 6789,support@ulsterelectric.co.uk,884 Province Road,Belfast,UK,BT2 2MN,None,8,"Capital city",Lead
+Belfast Roofing Co,Roofer,028 9056 7890,hello@belfastroofing.co.uk,995 Harbor Way,Belfast,UK,BT3 3NO,Outdated,8,"Port city",Lead
+Derry Plumbing,Plumber,028 7134 5678,info@derryplumbing.co.uk,106 Foyle Lane,Derry,UK,BT48 1OP,None,7,"Second city",Lead
+North West Electric,Electrician,028 7145 6789,help@northwestelectric.co.uk,217 River Road,Derry,UK,BT48 2PQ,None,8,"Border region",Lead
+Derry Roofing Solutions,Roofer,028 7156 7890,contact@derryroofing.co.uk,328 Bogside Street,Derry,UK,BT48 3QR,Outdated,9,"Historic city",Lead

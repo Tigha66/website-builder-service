@@ -1,0 +1,10 @@
+{
+  "publishes": {
+    "turbo-mango-hcn5": {
+      "siteUrl": "https://turbo-mango-hcn5.here.now/",
+      "claimToken": "47e514744430893e885b5442a6bc64c906db629592065b628eb6595033a82338",
+      "claimUrl": "https://here.now/claim?slug=turbo-mango-hcn5&token=47e514744430893e885b5442a6bc64c906db629592065b628eb6595033a82338",
+      "expiresAt": "2026-03-19T21:47:33.799Z"
+    }
+  }
+}

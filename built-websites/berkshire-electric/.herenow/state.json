@@ -1,0 +1,10 @@
+{
+  "publishes": {
+    "trusty-silence-kcs7": {
+      "siteUrl": "https://trusty-silence-kcs7.here.now/",
+      "claimToken": "e4cfc26940dac1afcec7323f754e311cf4bb5187441bc199fc8531b18a3f1adb",
+      "claimUrl": "https://here.now/claim?slug=trusty-silence-kcs7&token=e4cfc26940dac1afcec7323f754e311cf4bb5187441bc199fc8531b18a3f1adb",
+      "expiresAt": "2026-03-19T21:48:01.513Z"
+    }
+  }
+}

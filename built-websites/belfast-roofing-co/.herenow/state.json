@@ -1,0 +1,10 @@
+{
+  "publishes": {
+    "fierce-grace-ysfa": {
+      "siteUrl": "https://fierce-grace-ysfa.here.now/",
+      "claimToken": "e90781ec333433904ebd0701b41f2c612a74aa8ba06f25ed1789f9d8b8a9bbeb",
+      "claimUrl": "https://here.now/claim?slug=fierce-grace-ysfa&token=e90781ec333433904ebd0701b41f2c612a74aa8ba06f25ed1789f9d8b8a9bbeb",
+      "expiresAt": "2026-03-19T21:47:59.077Z"
+    }
+  }
+}

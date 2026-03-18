@@ -1,0 +1,10 @@
+{
+  "publishes": {
+    "dusky-hill-jwxm": {
+      "siteUrl": "https://dusky-hill-jwxm.here.now/",
+      "claimToken": "9848de127e4b864a894dd76988e4b477ab2133b124f899e92a0f6f7bb189ccee",
+      "claimUrl": "https://here.now/claim?slug=dusky-hill-jwxm&token=9848de127e4b864a894dd76988e4b477ab2133b124f899e92a0f6f7bb189ccee",
+      "expiresAt": "2026-03-19T21:47:29.009Z"
+    }
+  }
+}

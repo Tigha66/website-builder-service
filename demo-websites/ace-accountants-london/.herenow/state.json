@@ -1,0 +1,10 @@
+{
+  "publishes": {
+    "swift-finch-hkyp": {
+      "siteUrl": "https://swift-finch-hkyp.here.now/",
+      "claimToken": "c8e4bfe515d14c739f6f8198843cd59e3c24f9f0578ce5f3d7f7c89662e43acd",
+      "claimUrl": "https://here.now/claim?slug=swift-finch-hkyp&token=c8e4bfe515d14c739f6f8198843cd59e3c24f9f0578ce5f3d7f7c89662e43acd",
+      "expiresAt": "2026-03-19T21:47:15.234Z"
+    }
+  }
+}

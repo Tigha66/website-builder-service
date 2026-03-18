@@ -1,0 +1,10 @@
+{
+  "publishes": {
+    "quick-mango-y9n3": {
+      "siteUrl": "https://quick-mango-y9n3.here.now/",
+      "claimToken": "099b3d32ff7d024143f713695326461fc6c1c86d873b39efe725b08a64305ab7",
+      "claimUrl": "https://here.now/claim?slug=quick-mango-y9n3&token=099b3d32ff7d024143f713695326461fc6c1c86d873b39efe725b08a64305ab7",
+      "expiresAt": "2026-03-19T21:47:21.616Z"
+    }
+  }
+}

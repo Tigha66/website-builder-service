@@ -1,0 +1,10 @@
+{
+  "publishes": {
+    "frosty-garden-9ft3": {
+      "siteUrl": "https://frosty-garden-9ft3.here.now/",
+      "claimToken": "2a9a02c9ce5a0a14f613f0998883f91329423884993aa3798c773971736c4b44",
+      "claimUrl": "https://here.now/claim?slug=frosty-garden-9ft3&token=2a9a02c9ce5a0a14f613f0998883f91329423884993aa3798c773971736c4b44",
+      "expiresAt": "2026-03-19T21:47:31.489Z"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "publishes": {
+    "noble-tulip-z9fe": {
+      "siteUrl": "https://noble-tulip-z9fe.here.now/",
+      "claimToken": "254e52f8e13d50221c7564875c58051f1a2c92f7e6990f973fcca9ff25e78a5b",
+      "claimUrl": "https://here.now/claim?slug=noble-tulip-z9fe&token=254e52f8e13d50221c7564875c58051f1a2c92f7e6990f973fcca9ff25e78a5b",
+      "expiresAt": "2026-03-19T21:47:45.393Z"
+    }
+  }
+}

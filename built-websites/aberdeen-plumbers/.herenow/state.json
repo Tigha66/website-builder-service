@@ -1,0 +1,10 @@
+{
+  "publishes": {
+    "aware-aurora-c878": {
+      "siteUrl": "https://aware-aurora-c878.here.now/",
+      "claimToken": "fa4a00bd1bb4293cab13fa82d8bd8091ec0e7dd1f89593c9a9daba1937e1e419",
+      "claimUrl": "https://here.now/claim?slug=aware-aurora-c878&token=fa4a00bd1bb4293cab13fa82d8bd8091ec0e7dd1f89593c9a9daba1937e1e419",
+      "expiresAt": "2026-03-19T21:47:52.360Z"
+    }
+  }
+}

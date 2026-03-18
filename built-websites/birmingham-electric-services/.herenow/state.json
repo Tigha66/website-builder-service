@@ -1,0 +1,10 @@
+{
+  "publishes": {
+    "marine-nimbus-zvnb": {
+      "siteUrl": "https://marine-nimbus-zvnb.here.now/",
+      "claimToken": "be6f6b5c7843a4513d63b7b7fc8e3041d1eb45e40c677833969fcb33b7a3688b",
+      "claimUrl": "https://here.now/claim?slug=marine-nimbus-zvnb&token=be6f6b5c7843a4513d63b7b7fc8e3041d1eb45e40c677833969fcb33b7a3688b",
+      "expiresAt": "2026-03-19T21:48:03.998Z"
+    }
+  }
+}

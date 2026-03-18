@@ -1,0 +1,10 @@
+{
+  "publishes": {
+    "hollow-comet-xrt5": {
+      "siteUrl": "https://hollow-comet-xrt5.here.now/",
+      "claimToken": "fb091b663c0d5b2ab7419a6593a020a1243cb1b19d8ff4bcdd37221641f0c0c4",
+      "claimUrl": "https://here.now/claim?slug=hollow-comet-xrt5&token=fb091b663c0d5b2ab7419a6593a020a1243cb1b19d8ff4bcdd37221641f0c0c4",
+      "expiresAt": "2026-03-19T21:47:54.305Z"
+    }
+  }
+}

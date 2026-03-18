@@ -1,0 +1,13 @@
+Business Name,Niche,Phone,Email,Address,City,Country,Postcode,Current Website,Website Status,Opportunity Score,Notes,Status
+Smith & Sons Plumbing,Plumber,0161 123 4567,info@smithplumbing.example,123 High Street,Manchester,UK,M1 1AB,None,None,9,"4.8 stars, 87 reviews, no website",Example
+Quick Fix Electric,Electrician,0121 234 5678,info@quickfix.example,456 Market Street,Birmingham,UK,B1 1AA,old-site.com,Outdated,8,"Website from 2010, not mobile",Example
+Premier Roofing,Roofer,0113 345 6789,contact@premierroofing.example,789 Roof Lane,Leeds,UK,LS1 1AB,None,None,9,"5 stars, 120 reviews, Facebook only",Example
+Bright Smile Dental,Dentist,0114 456 7890,reception@brightsmile.example,321 Tooth Ave,Sheffield,UK,S1 1AB,None,None,10,"Established 1995, no web presence",Example
+Paws Vet Clinic,Vet,0115 567 8901,hello@pawsvet.example,654 Pet Street,Nottingham,UK,NG1 1AB,basic-site.com,Outdated,8,"Old site, needs redesign",Example
+Gloss Hair Salon,Hair Salon,0116 678 9012,book@glosshair.example,987 Style Road,Leicester,UK,LE1 1AB,None,None,9,"Instagram only, 4.9 stars",Example
+The Burger Joint,Restaurant,0117 789 0123,eat@burgerjoint.example,246 Food Lane,Bristol,UK,BS1 1AB,old-menu.com,Outdated,7,"Menu site only, no booking",Example
+Moto Mechanics,Auto Repair,0118 890 1234,fix@motomechanics.example,135 Garage Road,Reading,UK,RG1 1AB,None,None,9,"Busy garage, no website",Example
+Green Thumb Landscaping,Landscaper,0119 901 2345,green@thumb.example,864 Garden Way,Southampton,UK,SO1 1AB,simple-site.co.uk,Outdated,8,"Basic site, not mobile",Example
+Ace Accountants,Accountant,020 7123 4567,ace@accountants.example,753 Money Street,London,UK,E1 1AB,old-accounting.com,Outdated,7,"Dated site, needs refresh",Example
+,,,,,,,,,,,
+INSTRUCTIONS: Replace these example entries with REAL businesses you find. Use the QUICK-LEADS-GUIDE.md to find 50 real leads in 60 minutes. Then save as leads-final.csv and run: node build-all-websites.js

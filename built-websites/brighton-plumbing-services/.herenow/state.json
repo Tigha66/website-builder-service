@@ -1,0 +1,10 @@
+{
+  "publishes": {
+    "brisk-larch-qaab": {
+      "siteUrl": "https://brisk-larch-qaab.here.now/",
+      "claimToken": "6d25664751bf96c78b6f633ea45e8170bff958b475e05aada81fe0820998359e",
+      "claimUrl": "https://here.now/claim?slug=brisk-larch-qaab&token=6d25664751bf96c78b6f633ea45e8170bff958b475e05aada81fe0820998359e",
+      "expiresAt": "2026-03-19T21:48:05.764Z"
+    }
+  }
+}

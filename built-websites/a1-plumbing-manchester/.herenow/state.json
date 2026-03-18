@@ -1,0 +1,10 @@
+{
+  "publishes": {
+    "dusky-truffle-py59": {
+      "siteUrl": "https://dusky-truffle-py59.here.now/",
+      "claimToken": "667e94bf055a50167cd44b5a1bece863571e3d4e8c9e9ba1020a9b0bd359c9d5",
+      "claimUrl": "https://here.now/claim?slug=dusky-truffle-py59&token=667e94bf055a50167cd44b5a1bece863571e3d4e8c9e9ba1020a9b0bd359c9d5",
+      "expiresAt": "2026-03-19T21:47:49.847Z"
+    }
+  }
+}
